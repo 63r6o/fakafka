@@ -1,11 +1,22 @@
 import { useScreenWidth } from "../hooks/main";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
-import europe from "../utils/europe.json";
 
 const MapForm = ({ countries, handlePick, picks }) => {
   const [newRound, setNewRound] = useState(false);
   const width = useScreenWidth();
+
+  const [geography, setGeography] = useState(null);
+
+  useEffect(() => {
+    const getEurope = async () => {
+      const response = await fetch("/fakafka/europe.json");
+      const europe = await response.json();
+      setGeography(europe);
+    };
+
+    getEurope();
+  }, []);
 
   if (width < 800) return null;
 
@@ -20,7 +31,7 @@ const MapForm = ({ countries, handlePick, picks }) => {
         }}
       >
         <Geographies
-          geography={europe}
+          geography={geography}
           fill="#FEF7F7"
           stroke="#000000"
           strokeWidth={0.4}
