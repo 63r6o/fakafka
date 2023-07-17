@@ -1,0 +1,178 @@
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+
+  background-color: rgb(7, 2, 4);
+  box-shadow: 1px 4px 4px rgb(7, 2, 4);
+
+  display: flex;
+  padding-left: 17px;
+  padding-top: 17px;
+}
+
+header > .wordmark {
+  margin: 0;
+}
+
+header > .stuck {
+  font-size: 2.1em;
+  transform: rotate(-2deg);
+  text-shadow: 2px 2px #e50712, 3px 3px #e50712, 4px 4px #05ebed,
+    5px 5px #05ebed;
+
+  transition: font-size text-shadow 0.4s ease-in-out;
+}
+
+p {
+  margin: 10px;
+  padding: 0 7px;
+  color: rgba(214, 214, 218, 0.7);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  padding: 7px;
+  margin: 0 10px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+
+  max-width: 1700px;
+}
+
+.text-form {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.map-container {
+  flex-basis: 50%;
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+section {
+  padding: 7px;
+  margin: 0 10px 10px 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.8em;
+
+  padding: 17px 17px 0px 17px;
+  margin: auto 10px 10px 10px;
+}
+
+footer a {
+  color: rgba(214, 214, 218, 0.7);
+}
+
+footer a:hover {
+  color: rgba(214, 214, 218, 1);
+}
+
+footer a:active {
+  color: rgba(214, 214, 218, 0.5);
+}
+
+footer .github-icon {
+  display: inline-block;
+  fill: currentColor;
+}
+
+footer .github-container > a {
+  border-bottom: none;
+}
+
+footer p {
+  margin-right: 0;
+}
+
+.github-container {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: white;
+
+  text-decoration: none;
+  border-bottom: 0.1em solid white;
+}
+
+a:hover {
+  border-bottom: 0.2em solid red;
+}
+
+a:active {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+button {
+  font-family: "Hanken Grotesk";
+  padding: 8px 22px;
+  font-size: 0.9rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  color: white;
+  background-color: transparent;
+  box-shadow: 2px 2px cyan;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px cyan;
+  background-color: red;
+  transition: all 0.15s ease;
+}
+
+button:active {
+  background-color: black;
+  box-shadow: 1px 1px cyan;
+  transform: scale(0.97);
+  transition: all 0.15s ease;
+}
+
+button:focus {
+  outline: 1px solid cyan;
+  transition: all 0.15s ease;
+}
+
+.wordmark {
+  cursor: pointer;
+
+  margin-top: 0;
+
+  font-family: "Fraunces", serif;
+  font-size: 4.2em;
+
+  transform: rotate(-4deg);
+
+  transition: all 0.5s ease;
+}
+
+.wordmark:hover {
+  transform: rotate(-2deg);
+
+  text-shadow: 2px 2px #e50712, 3px 3px #e50712, 4px 4px #05ebed,
+    5px 5px #05ebed;
+
+  transition: text-shadow transform 0.4s ease-in-out;
+}
