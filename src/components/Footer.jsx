@@ -1,8 +1,8 @@
 import { ReactComponent as GithubIcon } from "../assets/github-mark.svg";
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 
+const Footer = () => {
   return (
     <footer>
       <p>© {currentYear} fakafka, Inc.</p>
