@@ -1,6 +1,7 @@
 import { useScreenWidth } from "../hooks/main";
 import { useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import europe from "../utils/europe.json";
 
 const MapForm = ({ countries, handlePick, picks }) => {
   const [newRound, setNewRound] = useState(false);
@@ -19,7 +20,7 @@ const MapForm = ({ countries, handlePick, picks }) => {
         }}
       >
         <Geographies
-          geography="../europe.json"
+          geography={europe}
           fill="#FEF7F7"
           stroke="#000000"
           strokeWidth={0.4}
